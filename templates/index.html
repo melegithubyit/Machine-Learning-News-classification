@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Category Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    
+</head>
+<body>
+    <h1>News Category Prediction</h1>
+    <p>Convert any text into following categories: <br><br>"POLITICS", "TECH", "BUSINESS", "ENTERTAINMENT","SPORT"</p>
+    <form action="/predict" method="POST" class="form_container">
+        <label for="news">Enter News:</label><br>
+        <textarea id="news" name="news" rows="4" cols="50" required></textarea><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <p>Classified category from the given text is....</p>
+        <h1>{{ prediction }}</h1>
+        <!-- <h3>Accuracy: {{ accuracy }}</h3> -->
+    {% endif %}
+
+    <br/><br/>
+    <a href="proceed" class="bttn2">Go Back</a>
+</body>
+</html>
