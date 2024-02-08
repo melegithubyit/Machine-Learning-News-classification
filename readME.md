@@ -1,4 +1,4 @@
-libraries we used:
+libraries I used:
 
 # Flask, pandas, scikit-learn's TfidfVectorizer, LogisticRegression, and accuracy_score, secret key
 
